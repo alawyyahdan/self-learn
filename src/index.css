@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Markdown Content Styles */
+.markdown-content {
+  @apply text-inherit;
+}
+
+.markdown-content p {
+  @apply my-2;
+}
+
+.markdown-content code {
+  @apply px-1 py-0.5 bg-black/5 dark:bg-white/10 rounded;
+}
+
+/* Math/KaTeX Styles */
+.math-display {
+  @apply my-4 overflow-x-auto py-2;
+}
+
+.bg-blue-600 .math,
+.bg-blue-600 .math-display {
+  @apply text-white;
+}
+
+.katex {
+  @apply text-inherit;
+  font-size: 1.1em !important;
+}
+
+.katex-display {
+  @apply my-4 overflow-x-auto py-2;
+}
+
+.katex-display > .katex {
+  @apply text-inherit;
+  font-size: 1.21em !important;
+}
+
+/* Dark mode message styling */
+.bg-blue-600 .katex {
+  @apply text-white;
+}
+
+/* Ensure proper spacing */
+.prose pre {
+  @apply my-2;
+}
+
+/* Improve readability */
+.katex-html {
+  @apply break-words;
+}
+
+/* Custom scrollbar for chat */
+.overflow-y-auto {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+}
+
+.overflow-y-auto::-webkit-scrollbar {
+  width: 6px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.5);
+  border-radius: 3px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(156, 163, 175, 0.7);
+}
+
+/* Dark mode styles */
+.dark .prose {
+  @apply text-gray-300;
+}
+
+.dark .prose strong {
+  @apply text-white;
+}
+
+.dark .prose a {
+  @apply text-blue-400;
+}
+
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3,
+.dark .prose h4 {
+  @apply text-white;
+}
+
+.dark .prose blockquote {
+  @apply border-gray-700 text-gray-400;
+}
+
+.dark .prose code {
+  @apply bg-gray-800 text-gray-300;
+}
+
+.dark .prose pre {
+  @apply bg-gray-800;
+}
+
+.dark .prose hr {
+  @apply border-gray-700;
+}
+
+.dark .prose table {
+  @apply border-gray-700;
+}
+
+.dark .prose thead {
+  @apply border-gray-700 text-gray-300;
+}
+
+.dark .prose tbody tr {
+  @apply border-gray-700;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out;
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Sticky image styles */
+.fixed.bottom-0 img {
+  pointer-events: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
