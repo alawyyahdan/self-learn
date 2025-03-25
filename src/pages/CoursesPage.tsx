@@ -247,7 +247,7 @@ export function CoursesPage() {
         {/* Sticky image at the bottom */}
         <div className="fixed bottom-0 left-0 right-0 flex justify-center z-10">
           <a 
-            href="https://sayato.lol" 
+            href="https://adan.lat" 
             target="_blank" 
             rel="noopener noreferrer"
             className="block"
